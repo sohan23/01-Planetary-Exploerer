@@ -1,0 +1,14 @@
+{
+  "strictLineBreaks": false,
+  "propertiesInDocument": "source",
+  "showLineNumber": true,
+  "foldHeading": true,
+  "autoConvertHtml": true,
+  "readableLineLength": false,
+  "promptDelete": false,
+  "showUnsupportedFiles": true,
+  "alwaysUpdateLinks": true,
+  "showInlineTitle": true,
+  "attachmentFolderPath": "04-Archive",
+  "userIgnoreFilters": null
+}

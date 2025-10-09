@@ -1,0 +1,184 @@
+/* Custom Image Positioning for Earth Science Notes */
+
+/* Float Images */
+.img-float-right {
+  float: right;
+  margin: 10px 0 10px 20px;
+  max-width: 400px;
+}
+
+.img-float-left {
+  float: left;
+  margin: 10px 20px 10px 0;
+  max-width: 400px;
+}
+
+/* Centered Images */
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Image Sizes */
+.img-small {
+  max-width: 250px;
+  width: 100%;
+}
+
+.img-medium {
+  max-width: 450px;
+  width: 100%;
+}
+
+.img-large {
+  max-width: 700px;
+  width: 100%;
+}
+
+.img-full {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Side-by-side Images */
+.img-container-flex {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.img-container-flex img {
+  flex: 1;
+  min-width: 200px;
+  object-fit: cover;
+}
+
+/* Grid Layout for Multiple Images */
+.img-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.img-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.img-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* Responsive grid - becomes 1 column on mobile */
+@media (max-width: 768px) {
+  .img-grid-2,
+  .img-grid-3,
+  .img-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Figure with Caption */
+.img-figure {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.img-figure img {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+
+.img-caption {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* Image with Border */
+.img-bordered {
+  border: 2px solid var(--background-modifier-border);
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--background-secondary);
+}
+
+/* Shadow Effect */
+.img-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+/* Overlapping Images Effect */
+.img-overlap-container {
+  position: relative;
+  height: 400px;
+  margin: 40px 0;
+}
+
+.img-overlap-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  max-width: 350px;
+}
+
+.img-overlap-2 {
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  z-index: 2;
+  max-width: 350px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Inline image within text */
+.img-inline {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+  max-height: 1.5em;
+}
+
+/* Comparison slider container (for before/after images) */
+.img-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin: 20px 0;
+}
+
+.img-compare img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Wrap text around image */
+.text-wrap {
+  overflow: auto;
+}
+
+.text-wrap::after {
+  content: "";
+  display: table;
+  clear: both;
+}

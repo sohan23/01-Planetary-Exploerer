@@ -1,0 +1,24 @@
+{
+  "cssTheme": "Vauxhall",
+  "baseFontSize": 15,
+  "interfaceFontFamily": "JetBrains Mono",
+  "textFontFamily": "JetBrains Mono",
+  "monospaceFontFamily": "JetBrains Mono",
+  "nativeMenus": false,
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "Colored Sidebar Items",
+    "Daily Note Themes",
+    "Notebook Backgrounds",
+    "CyanVoxel's General Tweaks",
+    "Japanese Font Support",
+    "Minecraft",
+    "Runescape",
+    "custom-admonitions.9c09b9",
+    "image-positioning"
+  ],
+  "showRibbon": true,
+  "baseFontSizeAction": true,
+  "showViewHeader": true,
+  "accentColor": "#a667fe"
+}

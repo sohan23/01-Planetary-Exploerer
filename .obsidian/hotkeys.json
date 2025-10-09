@@ -1,0 +1,27 @@
+{
+  "app:new-note": [],
+  "file-explorer:new-file": [],
+  "workspace:next-tab": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "PageDown"
+    }
+  ],
+  "editor:open-link-in-new-leaf": [],
+  "templater-obsidian:create-99-Meta/99-02-Templates/99-02-00-Quick Create with Folder Selection.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "N"
+    }
+  ],
+  "templater-obsidian:create-new-note-from-template": [],
+  "obsidian-completr:completr-fake-enter": [],
+  "obsidian-completr:completr-fake-arrow-up": [],
+  "obsidian-completr:completr-fake-arrow-down": [],
+  "obsidian-completr:completr-insert-selected-suggestion": [],
+  "obsidian-completr:completr-jump-to-next-snippet-placeholder": []
+}

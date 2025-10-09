@@ -1,0 +1,50 @@
+Icon Mapping for Tabler Icons (kebab-case format):
+
+file-text.svg → file text icon
+map.svg → map icon  
+folder.svg → folder icon
+world.svg / globe.svg → world/globe icon
+diamond.svg → diamond icon
+git-branch.svg → git branch icon
+bolt.svg → bolt/lightning icon
+bone.svg → bone icon
+flask.svg → flask/chemistry icon
+activity.svg → activity/waveform icon
+mountain.svg → mountain icon
+droplet.svg → water droplet icon
+coin.svg → coin icon
+clock.svg → clock icon
+history.svg → history icon
+anchor.svg → anchor icon
+sailboat.svg → sailboat icon
+cloud.svg → cloud icon
+map-pin.svg → map pin icon
+code.svg → code icon
+terminal.svg → terminal icon
+brain.svg → brain icon
+book.svg → book icon
+briefcase.svg → briefcase icon
+help.svg → help icon
+message-circle.svg → message circle icon
+player-play.svg → play icon
+building.svg → building icon
+bookmark.svg → bookmark icon
+download.svg → download icon
+bulb.svg → light bulb icon
+pencil.svg → pencil icon
+video.svg → video icon
+circle-check.svg → check circle icon
+loader.svg → loader/spinner icon
+feather.svg → feather icon
+edit.svg → edit icon
+archive.svg → archive icon
+calendar.svg → calendar icon
+calendar-check.svg → calendar with check icon
+photo.svg → photo icon
+camera.svg → camera icon
+device-desktop.svg → desktop device icon
+paperclip.svg → paperclip icon
+headphones.svg → headphones icon
+folder-open.svg → open folder icon
+settings.svg → settings icon
+file-code.svg → file code icon

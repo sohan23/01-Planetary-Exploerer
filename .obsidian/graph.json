@@ -1,0 +1,114 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": true,
+  "hideUnresolved": true,
+  "showOrphans": false,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:\"00-Maps of Content\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:\"01-Areas/01-01-Earth Science\"",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
+      }
+    },
+    {
+      "query": "path:\"01-Areas/01-02-Programming\"",
+      "color": {
+        "a": 1,
+        "rgb": 11621088
+      }
+    },
+    {
+      "query": "path:\"01-Areas/01-03-Interview\"",
+      "color": {
+        "a": 1,
+        "rgb": 16777011
+      }
+    },
+    {
+      "query": "path:\"02-Research/02-01-Scientific Research Paper/02-01-01-Zotero\"",
+      "color": {
+        "a": 1,
+        "rgb": 16755763
+      }
+    },
+    {
+      "query": "path:\"02-Research/02-01-Scientific Research Paper/02-01-02-Literature Notes\"",
+      "color": {
+        "a": 1,
+        "rgb": 16744272
+      }
+    },
+    {
+      "query": "path:\"02-Research/02-01-Scientific Research Paper/02-01-03-Synthesis Notes\"",
+      "color": {
+        "a": 1,
+        "rgb": 16738740
+      }
+    },
+    {
+      "query": "path:\"02-Research/02-02-Content Creation/02-02-01-YouTube\"",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
+      }
+    },
+    {
+      "query": "path:\"02-Research/02-02-Content Creation/02-02-02-Blog\"",
+      "color": {
+        "a": 1,
+        "rgb": 5592575
+      }
+    },
+    {
+      "query": "path:\"03-Ideas/03-01-Fleeting Notes\"",
+      "color": {
+        "a": 1,
+        "rgb": 16776960
+      }
+    },
+    {
+      "query": "path:\"03-Ideas/03-02-Permanent Notes\"",
+      "color": {
+        "a": 1,
+        "rgb": 16763904
+      }
+    },
+    {
+      "query": "path:\"05-Journals\"",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    },
+    {
+      "query": "path:\"99-Meta\"",
+      "color": {
+        "a": 1,
+        "rgb": 8421504
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": -1,
+  "nodeSizeMultiplier": 1.2,
+  "lineSizeMultiplier": 1.5,
+  "collapse-forces": false,
+  "centerStrength": 0.625356887937188,
+  "repelStrength": 11.0224839400428,
+  "linkStrength": 0.899446823697359,
+  "linkDistance": 171,
+  "scale": 0.39632259192580516,
+  "close": true
+}

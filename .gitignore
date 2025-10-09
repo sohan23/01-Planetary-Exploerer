@@ -1,0 +1,82 @@
+# Obsidian Vault .gitignore
+
+# Obsidian workspace and cache files
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/workspace
+.obsidian/plugins/*/data.json
+
+# Keep plugin settings but ignore workspace state
+!.obsidian/plugins/templater-obsidian/data.json
+!.obsidian/plugins/obsidian-icon-folder/data.json
+
+# Trash folder
+.trash/
+
+# Mac OS
+.DS_Store
+Thumbs.db
+
+# Windows
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Backup files
+*.bak
+*.backup
+
+# Log files
+*.log
+
+# Node modules (if using any JavaScript dependencies)
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# Personal sensitive notes (uncomment if needed)
+# **/Private/
+# **/Personal/
+
+# Obsidian sync conflict files
+*-conflict-*.md
+
+# Excalidraw autosave
+*.excalidraw.md~
+
+# MakeMD specific files
+.makemd/
+
+# Space plugin files
+.space/
+
+# Untitled drafts (uncomment if you don't want to track them)
+# Untitled*.md
+
+# Large media files (uncomment specific types if needed)
+# *.mp4
+# *.mov
+# *.avi
+# *.mkv
+# *.mp3
+# *.wav
+# *.flac
+# *.zip
+# *.rar
+# *.7z
+# *.iso
+# *.pdf
+# *.epub
+# *.mobi
+# *.bib
+
+# Zotero attachments (PDFs can be large - uncomment if not tracking)
+02-Research/02-01-Scientific Research Paper/02-01-01-Zotero Imports/**/*.pdf
+06-Media/06-04-Documents/**/*.pdf
+02-Research/02-01-Scientific Research Paper/My Library.bib
