@@ -452,6 +452,7 @@ collections
 consistent
 cited
 classes
+captures
 pen
 paired
 page
@@ -944,6 +945,7 @@ tfile
 targetFolder
 transforms
 technical
+thought
 Heading
 Hello
 Hi
@@ -1594,6 +1596,7 @@ sense
 skip
 stage
 serves
+suggestedTags
 bold
 brackets
 blueprint
@@ -1927,6 +1930,8 @@ op
 oya
 org
 output
+overthinking
+outline
 followings
 for
 from
@@ -2082,6 +2087,7 @@ fbfc
 friend
 forces
 formation
+folderPath
 One
 October
 Our
@@ -2168,6 +2174,7 @@ Organize
 Over
 Observations
 Other
+Opportunities
 ghofhgksfbhls
 green
 greater
@@ -2453,6 +2460,7 @@ Studies
 Stru
 Sessions
 Screenshots
+Sand
 Nag
 Normal
 November
@@ -2851,6 +2859,7 @@ rEBSd
 rL
 rdf
 regularly
+refined
 Bye
 Bennett
 Brownknight
@@ -3663,6 +3672,7 @@ Detect
 Definition
 Diagrams
 Documents
+Describe
 Ideas
 Important
 In
@@ -3757,6 +3767,7 @@ Identify
 Installation
 Install
 Institution
+Idea
 Authors
 Annotations
 Ariel
@@ -3878,6 +3889,7 @@ Atomic
 Applications
 Attachments
 Archive
+Additional
 Rajiv
 Robert
 Random
@@ -3991,6 +4003,8 @@ Real
 References
 Reviews
 Reflections
+Refine
+Refined
 Kanchan
 Key
 Kumaran
@@ -4184,6 +4198,9 @@ Make
 Makes
 Meta
 Maps
+Matters
+Modified
+Mining
 URL
 USQWI
 UK
@@ -5046,6 +5063,7 @@ nI
 nW
 noted
 noticing
+noteType
 Google
 GEE
 GD
@@ -5706,6 +5724,7 @@ qK
 qnJIs
 qd
 quotes
+quickly
 XN
 XGBoost
 XX
@@ -5935,6 +5954,7 @@ jz
 jpw
 jargon
 journey
+join
 xV
 xM
 xSP
