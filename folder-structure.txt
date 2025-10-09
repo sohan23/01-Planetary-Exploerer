@@ -256,35 +256,5 @@ F:\MAIN LOCAL WORKING FOLDER\01-PLANETARY EXPLORER
 |           CSIR - UGC(NET) Earth Science Syllabus.pdf
 |           
 \---99-Meta
-    +---99-01-Scripts
-    |       autoNumberFile-improved.js
-    |       createNoteWithFolderSelection.js
-    |       
-    +---99-02-Templates
-    |       99-02-00-Quick Create with Folder Selection.md
-    |       99-02-01-Areas.md
-    |       99-02-02-Research Notes.md
-    |       99-02-03-Ideas.md
-    |       99-02-04-Journals.md
-    |       99-02-05-Fleeting Notes.md
-    |       99-02-06-Earth Science Note.md
-    |       99-02-07-YouTube Script.md
-    |       99-02-08-Blog Post.md
-    |       99-02-09-Project Template.md
-    |       99-02-10-Daily Note.md
-    |       99-02-11-Map of Content (MOC).md
-    |       
-    \---99-03-Documentation
-            99-03-00-START HERE-Reading Order.md
-            99-03-01-Final Structure.md
-            99-03-02-Template Guide.md
-            99-03-03-Templates Updated.md
-            99-03-04-Quick Create Setup Guide.md
-            99-03-05-Quick Reference.md
-            99-03-06-Implementation Checklist.md
-            99-03-07-Updated Structure Plan.md
-            99-03-08-Research Workflow Guide.md
-            99-03-09-AutoNumberFile Upgrade Summary.md
-            99-03-10-Zotero Configuration Fix.md
-            99-03-11-Graph View Configuration.md
+            
             
