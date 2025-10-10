@@ -205,6 +205,9 @@ anywhere
 aware
 adapts
 automatic
+answers
+allow
+autoNumberedNoteCreation
 cssclasses
 classify
 coefficients
@@ -459,6 +462,14 @@ classes
 captures
 company
 citations
+calculates
+call
+cases
+code
+corrupted
+check
+calls
+calculation
 pen
 paired
 page
@@ -651,6 +662,11 @@ project
 programming
 prep
 progress
+prompts
+prefer
+plugins
+plan
+preparation
 magenta
 manila
 machine
@@ -798,6 +814,9 @@ mG
 mC
 mvL
 meta
+modal
+mistakes
+moves
 tags
 text
 two
@@ -959,6 +978,9 @@ transforms
 technical
 thought
 temporary
+target
+tech
+today
 Heading
 Hello
 Hi
@@ -1049,6 +1071,8 @@ HbR
 Hxl
 HV
 Hydrogeology
+Hotkey
+Hotkeys
 This
 The
 Two
@@ -1170,6 +1194,7 @@ Transform
 That
 Tech
 Tracker
+Tracking
 is
 italic
 itemized
@@ -1341,6 +1366,11 @@ iqR
 iKU
 iRP
 intellectual
+ignored
+implementations
+implementation
+incorrect
+identification
 standard
 skjvsfb
 sohljs
@@ -1616,6 +1646,8 @@ suggestedTags
 snippets
 sometimes
 slate
+stack
+sublevel
 bold
 brackets
 blueprint
@@ -1737,6 +1769,10 @@ below
 browser
 blank
 brainstorming
+bind
+binding
+block
+body
 has
 happens
 highlights
@@ -1835,6 +1871,7 @@ hLY
 hN
 hJbMatS
 handles
+hotkey
 one
 of
 over
@@ -1955,6 +1992,10 @@ output
 overthinking
 outline
 optional
+oceanography
+older
+opens
+operation
 followings
 for
 from
@@ -2114,6 +2155,9 @@ folderPath
 flexible
 functions
 finished
+formatting
+form
+fields
 One
 October
 Our
@@ -2201,6 +2245,8 @@ Over
 Observations
 Other
 Opportunities
+OR
+OFF
 ghofhgksfbhls
 green
 greater
@@ -2313,6 +2359,8 @@ gj
 gwl
 gPf
 gS
+goals
+graph
 Sohan
 See
 Student
@@ -2494,6 +2542,9 @@ Stack
 STAR
 Structured
 Synthesized
+Shows
+Syntax
+Starts
 Nag
 Normal
 November
@@ -2577,6 +2628,7 @@ NY
 Nsx
 NJ
 Name
+NOT
 Page
 Publish
 Purpose
@@ -2714,6 +2766,9 @@ Petrology
 Paleontology
 Preparation
 Photos
+Prompts
+Planned
+Pattern
 red
 researcher
 remote
@@ -2894,6 +2949,7 @@ rdf
 regularly
 refined
 reflections
+routine
 Bye
 Bennett
 Brownknight
@@ -2975,6 +3031,8 @@ Brief
 Behavioral
 Blank
 Budding
+Bind
+Binding
 You
 Year
 Yellow
@@ -3276,6 +3334,9 @@ wQ
 worth
 without
 weekly
+world
+week
+writing
 don
 date
 developed
@@ -3457,6 +3518,8 @@ descriptively
 discipline
 detects
 development
+duplicates
+descriptive
 know
 key
 kernel
@@ -3714,6 +3777,8 @@ Diagrams
 Documents
 Describe
 Disciplines
+Direct
+Details
 Ideas
 Important
 In
@@ -3810,6 +3875,7 @@ Install
 Institution
 Idea
 Includes
+Instructions
 Authors
 Annotations
 Ariel
@@ -3934,6 +4000,12 @@ Archive
 Additional
 Available
 AND
+Automatically
+ALL
+Assign
+Accomplishments
+AFTER
+Adding
 Rajiv
 Robert
 Random
@@ -4049,6 +4121,9 @@ Reviews
 Reflections
 Refine
 Refined
+Returns
+Reflection
+Re
 Kanchan
 Key
 Kumaran
@@ -4247,6 +4322,11 @@ Modified
 Mining
 Mappings
 Milestones
+Mapping
+Mastered
+Minimalistic
+Modifying
+Maintained
 URL
 USQWI
 UK
@@ -4321,6 +4401,8 @@ UrR
 US
 Uly
 Using
+Understood
+Uses
 Zotero
 Zolfaghari
 ZGNTK
@@ -4581,6 +4663,7 @@ lang
 language
 liberally
 limits
+list
 JV
 Jason
 JE
@@ -4805,6 +4888,12 @@ Concepts
 Characteristics
 Code
 Comprehensive
+Commands
+Cannot
+Customization
+Copy
+Customize
+Copilot
 Eric
 Earth
 Engine
@@ -4912,6 +5001,9 @@ EOF
 Evergreen
 Entry
 Escape
+Execution
+Edit
+Ensure
 Willis
 We
 WT
@@ -5208,6 +5300,8 @@ Geochemistry
 Geophysics
 Geomorphology
 General
+Goals
+GitHub
 using
 used
 up
@@ -5303,6 +5397,7 @@ ua
 uuid
 usable
 until
+unnumbered
 explicit
 extracted
 effective
@@ -5474,6 +5569,9 @@ empty
 edit
 enable
 evergreen
+examples
+eliminates
+emoji
 Vector
 VP
 VBH
@@ -5707,6 +5805,7 @@ vRx
 vxN
 vP
 verbatim
+visualize
 quality
 quantity
 question
@@ -5942,6 +6041,7 @@ Qw
 Qxv
 Qp
 Quality
+Question
 journalArticle
 js
 je
@@ -6009,6 +6109,7 @@ jpw
 jargon
 journey
 join
+journaling
 xV
 xM
 xSP

@@ -18,10 +18,27 @@
       "key": "N"
     }
   ],
-  "templater-obsidian:create-new-note-from-template": [],
+  "templater-obsidian:create-new-note-from-template": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "N"
+    }
+  ],
   "obsidian-completr:completr-fake-enter": [],
   "obsidian-completr:completr-fake-arrow-up": [],
   "obsidian-completr:completr-fake-arrow-down": [],
   "obsidian-completr:completr-insert-selected-suggestion": [],
-  "obsidian-completr:completr-jump-to-next-snippet-placeholder": []
+  "obsidian-completr:completr-jump-to-next-snippet-placeholder": [],
+  "templater-obsidian:insert-templater": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "F"
+    }
+  ],
+  "global-search:open": []
 }
