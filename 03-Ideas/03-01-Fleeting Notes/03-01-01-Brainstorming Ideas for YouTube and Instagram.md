@@ -3,7 +3,7 @@ title: 03-01-01-Brainstorming Ideas for Youtube
 aliases:
   - Brainstorming Ideas for Youtube
 tags:
-date: 2025-10-05
+created: 2025-10-05T00:00:00Z
 cssclasses:
   - page-dot-grid-bold
   - page-blueprint
@@ -66,4 +66,4 @@ This section will have two things
 	2. For audio - Audacity.
 
 
-Several other things has to be sorted out also. We will do that in later times.
+Several other things has to be sorted out also. We will do that in later times. 

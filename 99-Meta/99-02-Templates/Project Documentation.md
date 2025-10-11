@@ -1,6 +1,7 @@
 ---
-creation_date: <% tp.date.now("YYYY-MM-DD") %> 
-tags: - project-doc 
+created: <% tp.date.now("YYYY-MM-DDTHH:mm:ssZ") %> 
+tags: 
+  - project-doc
 project_status: planning # planning, active, on-hold, completed 
 due_date: 
 --- 
@@ -32,5 +33,5 @@ due_date:
 - [ ] Task 3 
 - [ ] 
 ### 5. Notes & Decisions Log 
-- **<% tp.date.now("YYYY-MM-DD") %>:** Project initiated.
+- **<% tp.date.now("YYYY-MM-DDTHH:mm:ssZ") %>:** Project initiated.
 - 

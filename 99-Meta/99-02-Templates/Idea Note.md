@@ -1,5 +1,5 @@
 ---
-creation_date: <% tp.date.now("YYYY-MM-DD") %>
+created: <% tp.date.now("YYYY-MM-DDTHH:mm:ssZ") %>
 tags:
   - <% await tp.system.suggester(["Fleeting Note", "Permanent Note"], ["idea/fleeting", "idea/permanent"]) %>
 aliases: []

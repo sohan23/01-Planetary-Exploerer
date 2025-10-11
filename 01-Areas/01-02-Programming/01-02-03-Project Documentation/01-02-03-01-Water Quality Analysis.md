@@ -1,15 +1,18 @@
 ---
-created: <% tp.date.now("YYYY-MM-DDTHH:mm:ssZ") %>
+created: 2025-10-11T00:00:00Z
 tags:
   - programming
   - python
+cssclasses: 
+ - page-blueprint
+ - page-grid
 language: python
 libraries:
   - 
 status: 
 ---
 
-# <% tp.file.title %>
+# 01-02-03-01-Water Quality Analysis
 
 > [!abstract] Purpose
 > What is the primary goal of this script or concept?

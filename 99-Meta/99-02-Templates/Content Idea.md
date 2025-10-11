@@ -1,5 +1,5 @@
 ---
-creation_date: <% tp.date.now("YYYY-MM-DD") %>
+created: <% tp.date.now("YYYY-MM-DDTHH:mm:ssZ") %>") %>
 tags:
   - content-idea
 type: <% await tp.system.suggester(["Video", "Article", "Presentation", "Project"], ["video", "article", "presentation", "project"]) %>

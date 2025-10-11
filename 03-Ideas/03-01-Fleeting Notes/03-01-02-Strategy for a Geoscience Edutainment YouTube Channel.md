@@ -3,7 +3,7 @@ title: 03-01-02-Strategy for a Geoscience Edutainment YouTube Channel
 aliases:
   - Strategy for a Geoscience Edutainment YouTube Channel
 tags:
-date: 2025-10-05
+created: 2025-10-05T00:00:00Z
 cssclasses:
  - page-blueprint
  - page-grid
