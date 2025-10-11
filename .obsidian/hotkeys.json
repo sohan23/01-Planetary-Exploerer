@@ -10,15 +10,18 @@
     }
   ],
   "editor:open-link-in-new-leaf": [],
-  "templater-obsidian:create-99-Meta/99-02-Templates/99-02-00-Quick Create with Folder Selection.md": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "N"
-    }
-  ],
-  "templater-obsidian:create-new-note-from-template": [
+  "templater-obsidian:create-new-note-from-template": [],
+  "obsidian-completr:completr-fake-enter": [],
+  "obsidian-completr:completr-fake-arrow-up": [],
+  "obsidian-completr:completr-fake-arrow-down": [],
+  "obsidian-completr:completr-insert-selected-suggestion": [],
+  "obsidian-completr:completr-jump-to-next-snippet-placeholder": [],
+  "templater-obsidian:insert-templater": [],
+  "global-search:open": [],
+  "file-explorer:new-file-in-new-pane": [],
+  "templater-obsidian:jump-to-next-cursor-location": [],
+  "templater-obsidian:replace-in-file-templater": [],
+  "templater-obsidian:create-99-Meta/99-02-Templates/Simple Create.md": [
     {
       "modifiers": [
         "Mod"
@@ -26,19 +29,12 @@
       "key": "N"
     }
   ],
-  "obsidian-completr:completr-fake-enter": [],
-  "obsidian-completr:completr-fake-arrow-up": [],
-  "obsidian-completr:completr-fake-arrow-down": [],
-  "obsidian-completr:completr-insert-selected-suggestion": [],
-  "obsidian-completr:completr-jump-to-next-snippet-placeholder": [],
-  "templater-obsidian:insert-templater": [
+  "templater-obsidian:create-99-Meta/99-02-Templates/Create New Note.md": [
     {
       "modifiers": [
-        "Mod",
-        "Shift"
+        "Mod"
       ],
-      "key": "F"
+      "key": "N"
     }
-  ],
-  "global-search:open": []
+  ]
 }

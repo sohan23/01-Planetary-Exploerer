@@ -1,33 +1,58 @@
 /*
  * ==========================================================================
- * Templater User Script: Interactive Note Creator
+ * Templater User Script: Interactive Note Creator (v2 - Smart Templates)
  * ==========================================================================
  *
  * - Prompts for a folder, allowing search and creation.
- * - Automatically calculates and prepends a numbered prefix (e.g., 01-01-)
- * to new notes and folders.
+ * - Automatically calculates and prepends a numbered prefix.
  * - Prompts for the note title.
- * - Conditionally selects a template based on the creation context.
+ * - **NEW**: Automatically selects a template based on folder rules.
  * - Creates, renames, and moves the note to the correct location.
  *
  */
 
-// User Configuration
+// =========================================================================
+//                            USER CONFIGURATION
+// =========================================================================
 const CONFIG = {
-  // Path to the template used when the process is cancelled or for generic new files.
+  // Path to the template used as a fallback.
   normalTemplatePath: "99-Meta/99-02-Templates/Normal Template.md",
+
   // Folder containing all your 'pre-made' content templates.
   premadeTemplatesFolder: "99-Meta/99-02-Templates",
+
   // List of folders to EXCLUDE from all folder selection prompts.
-  foldersToIgnore: [
-    "04-Archive",
-    "06-Media",
-    "99-Meta/99-02-Templates",
-  ],
+  foldersToIgnore: ["04-Archive", "06-Media", "99-Meta/99-02-Templates"],
+
+  // =====================================================================
+  //          *** FOLDER TO TEMPLATE MAPPING ***
+  //  Define your rules here. The script will check if a folder path
+  //  *includes* the keyword and use the corresponding template.
+  //  The first match wins.
+  // =====================================================================
+  folderTemplateMap: {
+    // Keyword (in folder name) : Template Path
+    "Earth Science": "99-Meta/99-02-Templates/Earth Science Note.md",
+    Programming: "99-Meta/99-02-Templates/Programming Note.md",
+    "Project Documentation": "99-Meta/99-02-Templates/Project Documentation.md",
+    YouTube: "99-Meta/99-02-Templates/Content Idea.md",
+    Blog: "99-Meta/99-02-Templates/Blog Post.md",
+    Ideas: "99-Meta/99-02-Templates/Idea Note.md",
+  },
 };
 
 async function noteCreator(tp) {
-  // Helper function to get all folders in the vault, excluding ignored ones.
+  // Helper function to get the correct template for a given folder path
+  function getTemplateForFolder(path) {
+    for (const keyword in CONFIG.folderTemplateMap) {
+      if (path.toLowerCase().includes(keyword.toLowerCase())) {
+        return CONFIG.folderTemplateMap[keyword];
+      }
+    }
+    return null; // No match found
+  }
+
+  // Helper function to get all folders, excluding ignored ones.
   function getAllFolders() {
     return tp.app.vault
       .getAllLoadedFiles()
@@ -41,12 +66,11 @@ async function noteCreator(tp) {
       .map((folder) => folder.path);
   }
 
-  // Helper function to calculate the next numbered prefix for a file or folder.
+  // Helper function to calculate the next numbered prefix.
   async function getNextPrefix(parentFolderPath) {
     try {
       const parentFolder = tp.app.vault.getAbstractFileByPath(parentFolderPath);
       if (!parentFolder || !parentFolder.children) {
-        // If it's the root or folder not found, start with '01-'
         const rootFiles = await tp.app.vault.adapter.list(parentFolderPath);
         const items = [...rootFiles.files, ...rootFiles.folders];
         const existingPrefixes = items
@@ -78,7 +102,7 @@ async function noteCreator(tp) {
       const maxPrefix = Math.max(...existingPrefixes);
       return `${basePrefix}${String(maxPrefix + 1).padStart(2, "0")}-`;
     } catch (e) {
-      new Notice("Error calculating prefix. Defaulting to '01-'", 5000);
+      new Notice("Error calculating prefix.", 5000);
       console.error(e);
       return "01-";
     }
@@ -89,7 +113,7 @@ async function noteCreator(tp) {
     // 1. SELECT FOLDER
     const allFolders = getAllFolders();
     const searchQuery = await tp.system.prompt(
-      "Enter folder search term (or leave blank to see all):"
+      "Enter folder search term (or leave blank):"
     );
 
     let targetFolder;
@@ -106,10 +130,9 @@ async function noteCreator(tp) {
       );
       if (choice === "use_selected") {
         targetFolder = matchingFolders[0];
-      } else if (choice === null) return; // User cancelled
+      } else if (choice === null) return;
     }
 
-    // If no choice yet, show the full list
     if (!targetFolder) {
       const allOptions = ["(Vault Root)", ...allFolders, "[Create New Folder]"];
       targetFolder = await tp.system.suggester(
@@ -125,28 +148,29 @@ async function noteCreator(tp) {
     }
 
     let isNewFolder = false;
+    let parentFolderForNew = null;
     // 2. CREATE NEW FOLDER IF REQUESTED
     if (targetFolder === "[Create New Folder]") {
       isNewFolder = true;
-      const parentFolder = await tp.system.suggester(
+      parentFolderForNew = await tp.system.suggester(
         ["(Vault Root)", ...allFolders],
         ["/", ...allFolders],
         false,
         "Select parent for new folder:"
       );
-      if (!parentFolder) return; // User cancelled
+      if (!parentFolderForNew) return;
 
       const newFolderName = await tp.system.prompt("Enter new folder name:");
-      if (!newFolderName) return; // User cancelled
+      if (!newFolderName) return;
 
       const prefix = await getNextPrefix(
-        parentFolder === "/" ? "" : parentFolder
+        parentFolderForNew === "/" ? "" : parentFolderForNew
       );
       const fullFolderName = `${prefix}${newFolderName}`;
       const newFolderPath =
-        parentFolder === "/"
+        parentFolderForNew === "/"
           ? fullFolderName
-          : `${parentFolder}/${fullFolderName}`;
+          : `${parentFolderForNew}/${fullFolderName}`;
       await tp.app.vault.createFolder(newFolderPath);
       targetFolder = newFolderPath;
       new Notice(`Created folder: ${targetFolder}`);
@@ -156,62 +180,66 @@ async function noteCreator(tp) {
 
     // 3. GET NOTE TITLE
     const noteTitle = await tp.system.prompt("Enter the note title:");
-    if (!noteTitle) return; // User cancelled
+    if (!noteTitle) return;
 
     const filePrefix = await getNextPrefix(
       targetFolder === "/" ? "" : targetFolder
     );
     const fullNoteTitle = `${filePrefix}${noteTitle}`;
 
-    // 4. SELECT TEMPLATE
+    // 4. SELECT TEMPLATE (NEW SMART LOGIC)
     let templatePath = "";
-    if (targetFolder === "/" && !isNewFolder) {
-      templatePath = CONFIG.normalTemplatePath;
-    } else if (isNewFolder) {
-      const premadeTemplates = tp.app.vault
-        .getFiles()
-        .filter((f) => f.path.startsWith(CONFIG.premadeTemplatesFolder));
-      const templateChoices = {
-        [CONFIG.normalTemplatePath]: "Normal Template",
-      };
-      premadeTemplates.forEach((f) => (templateChoices[f.path] = f.basename));
-
-      templatePath = await tp.system.suggester(
-        Object.values(templateChoices),
-        Object.keys(templateChoices),
-        false,
-        "Select a template for the new folder:"
-      );
-      if (!templatePath) return; // User cancelled
+    if (isNewFolder) {
+      if (parentFolderForNew === "/") {
+        // New folder in ROOT: Prompt the user.
+        const premadeTemplates = tp.app.vault
+          .getFiles()
+          .filter((f) => f.path.startsWith(CONFIG.premadeTemplatesFolder));
+        const templateChoices = premadeTemplates.map((f) => f.path);
+        templatePath = await tp.system.suggester(
+          templateChoices.map((p) => p.split("/").pop()),
+          templateChoices,
+          false,
+          "Select a template for the new root folder:"
+        );
+        if (!templatePath) return;
+      } else {
+        // New folder in SUB-FOLDER: Inherit from parent.
+        templatePath = getTemplateForFolder(parentFolderForNew);
+      }
     } else {
-      const premadeTemplates = tp.app.vault
-        .getFiles()
-        .filter((f) => f.path.startsWith(CONFIG.premadeTemplatesFolder));
-      const templateChoices = premadeTemplates.map((f) => f.path);
-      templatePath = await tp.system.suggester(
-        templateChoices.map((p) => p.split("/").pop()),
-        templateChoices,
-        false,
-        "Select a template:"
+      // Existing folder: Find the template automatically.
+      templatePath = getTemplateForFolder(targetFolder);
+    }
+
+    // Fallback to normal template if no rule was found
+    if (!templatePath) {
+      templatePath = CONFIG.normalTemplatePath;
+      new Notice(
+        "No specific template rule found. Using Normal Template.",
+        3000
       );
-      if (!templatePath) return; // User cancelled
     }
 
     // 5. CREATE AND MOVE THE NOTE
     const targetPath =
       targetFolder === "/" ? fullNoteTitle : `${targetFolder}/${fullNoteTitle}`;
 
-    // Use the chosen template's content
     const templateFile = tp.app.vault.getAbstractFileByPath(templatePath);
+    if (!templateFile) {
+      new Notice(
+        `ERROR: Template file not found at path: ${templatePath}`,
+        10000
+      );
+      return;
+    }
     const templateContent = await tp.app.vault.read(templateFile);
 
-    // Create the file at the final destination with the template content
     const newFile = await tp.app.vault.create(
       targetPath + ".md",
       templateContent
     );
 
-    // Open the new file
     await tp.app.workspace.getLeaf(false).openFile(newFile);
   } catch (e) {
     console.error("Templater Script Error:", e);
