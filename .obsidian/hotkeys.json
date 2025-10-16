@@ -1,6 +1,13 @@
 {
   "app:new-note": [],
-  "file-explorer:new-file": [],
+  "file-explorer:new-file": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "N"
+    }
+  ],
   "workspace:next-tab": [
     {
       "modifiers": [
@@ -10,14 +17,7 @@
     }
   ],
   "editor:open-link-in-new-leaf": [],
-  "templater-obsidian:create-new-note-from-template": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "N"
-    }
-  ],
+  "templater-obsidian:create-new-note-from-template": [],
   "obsidian-completr:completr-fake-enter": [],
   "obsidian-completr:completr-fake-arrow-up": [],
   "obsidian-completr:completr-fake-arrow-down": [],
