@@ -22,11 +22,13 @@ async function autoNumberedNoteCreation(tp) {
 
   let highestFileNumber = 0;
   for (const file of currentFolder.children) {
-    const match = file.name.match(fileNumberRegex);
-    if (match && match[1]) {
-      const fileNumber = parseInt(match[1], 10);
-      if (fileNumber > highestFileNumber) {
-        highestFileNumber = fileNumber;
+    if (file.extension) {
+      const match = file.name.match(fileNumberRegex);
+      if (match && match[1]) {
+        const fileNumber = parseInt(match[1], 10);
+        if (fileNumber > highestFileNumber) {
+          highestFileNumber = fileNumber;
+        }
       }
     }
   }
