@@ -1,6 +1,6 @@
 {
   "command_timeout": 5,
-  "templates_folder": "99-Meta/99-02-Templates",
+  "templates_folder": "99-Meta/99-01-Templates",
   "templates_pairs": [
     [
       "",
@@ -16,11 +16,15 @@
   "folder_templates": [
     {
       "folder": "01-Areas/01-01-Earth Science",
-      "template": "99-Meta/99-02-Templates/Earth Science Note.md"
+      "template": "99-Meta/99-01-Templates/Earth Science Note.md"
     },
     {
-      "folder": "03-Ideas",
-      "template": "99-Meta/99-02-Templates/Idea Note.md"
+      "folder": "01-Areas/01-02-Programming/01-02-01-Python",
+      "template": "99-Meta/99-01-Templates/Python Note.md"
+    },
+    {
+      "folder": "01-Areas/01-02-Programming/01-02-02-Machine Learning",
+      "template": "99-Meta/99-01-Templates/Machine Learning Note.md"
     }
   ],
   "enable_file_templates": false,
