@@ -1,64 +1,73 @@
-
 async function autoNumberedNoteCreation(tp) {
-  // 1. Get the current folder where the note is being created.
-  const currentFolder = tp.file.folder(true); // Get relative folder path, e.g., "01-Areas/Sub-Folder"
+  console.log("--- Running autoNumberedNoteCreation script ---");
+
+  // --- Step 1: Get folder ---
+  const currentFolder = app.vault.getAbstractFileByPath(tp.file.folder(true));
   if (!currentFolder) {
-    new Notice("Error: Cannot determine the current folder.");
+    new Notice("Error: Cannot find the current folder.");
+    console.log("Error: currentFolder is null or undefined.");
     return null;
   }
+  console.log(`1. Folder Name: "${currentFolder.name}"`);
 
-  const folder = app.vault.getAbstractFileByPath(currentFolder);
-  if (!folder || !folder.children) {
-    new Notice("Error: Cannot read the contents of the folder.");
-    return null;
-  }
-
-  // 2. Extract the prefix from the folder's name (e.g., "01-Areas" -> "01").
-  const folderName = folder.name;
+  // --- Step 2: Extract folder prefix ---
+  const folderName = currentFolder.name.trim(); // Trim whitespace just in case
   const folderPrefixMatch = folderName.match(/^(\d+(-\d+)*)/);
-  const folderPrefix = folderPrefixMatch ? folderPrefixMatch[1] : '';
+  const folderPrefix = folderPrefixMatch ? folderPrefixMatch[1] : null;
 
   if (!folderPrefix) {
-      new Notice("Folder name does not have a recognized number prefix (e.g., '01-Topic', '02-01-Subtopic').");
-      return null;
+    new Notice("Error: The folder name does not start with a recognized number prefix.");
+    console.log(`Error: Could not find prefix in "${folderName}".`);
+    return null;
   }
+  console.log(`2. Extracted Folder Prefix: "${folderPrefix}"`);
 
-  // 3. Find the highest existing file number within that folder.
-  let maxFileNum = 0;
-  // This regex looks for filenames starting with the exact folder prefix, followed by a dash and a number.
-  const fileRegex = new RegExp(`^${folderPrefix}-(\d+)`);
+  // --- Step 3: Find highest file number ---
+  let highestFileNumber = 0;
+  const fileNumberRegex = new RegExp(`^${folderPrefix}-(\d+)`);
+  console.log(`3. Using Regex to find file numbers: ${fileNumberRegex}`);
 
-  for (const file of folder.children) {
-    const match = file.name.match(fileRegex);
+  console.log("--- Checking files in folder ---");
+  for (const file of currentFolder.children) {
+    console.log(`- Checking file: "${file.name}"`);
+    const match = file.name.match(fileNumberRegex);
     if (match && match[1]) {
-      const fileNum = parseInt(match[1], 10);
-      if (fileNum > maxFileNum) {
-        maxFileNum = fileNum;
+      console.log(`  - Match found! Extracted number: "${match[1]}"`);
+      const fileNumber = parseInt(match[1], 10);
+      if (fileNumber > highestFileNumber) {
+        highestFileNumber = fileNumber;
+        console.log(`  - New highest number: ${highestFileNumber}`);
       }
+    } else {
+      console.log("  - No match.");
     }
   }
+  console.log("--- Finished checking files ---");
+  console.log(`4. Final Highest File Number: ${highestFileNumber}`);
 
-  // 4. Calculate the next file number and pad it with a leading zero if needed.
-  const nextFileNum = maxFileNum + 1;
-  const newFileNumberPadded = nextFileNum.toString().padStart(2, '0');
 
-  // 5. Prompt the user for the desired title of the note.
-  const cleanTitle = await tp.system.prompt("Enter Note Title:");
-  if (!cleanTitle) {
-    // This happens if the user presses escape or cancels the prompt.
+  // --- Step 4: Calculate next file number ---
+  const nextFileNumber = highestFileNumber + 1;
+  const nextFileNumberPadded = nextFileNumber.toString().padStart(2, '0');
+  console.log(`5. Next File Number (padded): "${nextFileNumberPadded}"`);
+
+  // --- Step 5: Prompt for title ---
+  const noteTitle = await tp.system.prompt("Enter Note Title:");
+  if (!noteTitle) {
+    console.log("User cancelled title prompt.");
     return null;
   }
 
-  // 6. Construct the full, final filename.
-  // We sanitize the title to remove characters that are invalid in filenames.
-  const sanitizedTitle = cleanTitle.replace(/[\/:"*?<>|]+/g, '');
-  const fullTitle = `${folderPrefix}-${newFileNumberPadded}-${sanitizedTitle}`;
+  // --- Step 6: Construct filename ---
+  const sanitizedTitle = noteTitle.replace(/[\/:'''*?<>|]+/g, '');
+  const fullFilename = `${folderPrefix}-${nextFileNumberPadded}-${sanitizedTitle}`;
+  console.log(`6. Final Filename: "${fullFilename}"`);
 
-  // 7. Return an object with all the details. The calling template will use this.
+  // --- Step 7: Return data ---
   return {
-    fullTitle: fullTitle,
-    cleanTitle: cleanTitle, // The original title for use in aliases
-    folderPath: currentFolder
+    fullTitle: fullFilename,
+    cleanTitle: noteTitle,
+    folderPath: tp.file.folder(true)
   };
 }
 
