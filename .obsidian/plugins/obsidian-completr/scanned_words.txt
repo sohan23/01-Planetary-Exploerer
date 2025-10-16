@@ -1744,6 +1744,7 @@ specified
 smartly
 self
 sanitizedName
+sg
 bold
 brackets
 blueprint
@@ -2683,6 +2684,7 @@ Safety
 SUCCESS
 STEP
 Silently
+Sub
 Nag
 Normal
 November

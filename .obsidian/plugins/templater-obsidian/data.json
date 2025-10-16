@@ -11,12 +11,20 @@
   "auto_jump_to_cursor": true,
   "enable_system_commands": true,
   "shell_path": "",
-  "user_scripts_folder": "99-Meta/99-02-Scripts",
+  "user_scripts_folder": "scripts",
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "/",
-      "template": "99-Meta/99-01-Templates/Run Automatic Prefixer.md"
+      "folder": "01-Areas/01-01-Earth Science",
+      "template": "99-Meta/99-01-Templates/Earth Science Note.md"
+    },
+    {
+      "folder": "01-Areas/01-02-Programming/01-02-01-Python",
+      "template": "99-Meta/99-01-Templates/Python Note.md"
+    },
+    {
+      "folder": "01-Areas/01-02-Programming/01-02-02-Machine Learning",
+      "template": "99-Meta/99-01-Templates/Machine Learning Note.md"
     }
   ],
   "enable_file_templates": false,

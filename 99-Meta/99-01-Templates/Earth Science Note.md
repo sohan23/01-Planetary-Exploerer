@@ -1,9 +1,26 @@
+<%*
+// Earth Science Note Template
+const result = await tp.user.autoNumberedNoteCreation(tp);
+
+if (!result) {
+  // User cancelled
+  return;
+}
+
+// Move and rename the file
+await tp.file.move(`${result.folderPath}/${result.fullTitle}`);
+-%>
 ---
-Date: <% tp.date.now("YYYY-MM-DD") %>
-Tags: #earth-science
+title: <% result.fullTitle %>
+aliases:
+  - <% result.cleanTitle %>
+Date Created: <% tp.date.now("YYYY-MM-DD") %>
+<!-- Date Modified: <% tp.date.now("YYYY-MM-DD") %> -->
+Tags: 
+ - earth-science
 ---
 
-# <% tp.file.title %>
+# <% result.cleanTitle %>
 
 ## Topic
 
