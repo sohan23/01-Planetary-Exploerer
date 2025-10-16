@@ -1,9 +1,9 @@
 ---
-Date: <% tp.date.now("YYYY-MM-DD") %>
+Date: 2025-10-16
 Tags: #machine-learning
 ---
 
-# <% tp.file.title %>
+# Python Note
 
 ## Algorithm/Concept
 
