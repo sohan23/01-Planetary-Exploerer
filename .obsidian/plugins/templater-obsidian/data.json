@@ -1,6 +1,6 @@
 {
   "command_timeout": 5,
-  "templates_folder": "99-Meta/99-01-Templates",
+  "templates_folder": "99-Meta/99-02-Templates",
   "templates_pairs": [
     [
       "",
@@ -11,20 +11,16 @@
   "auto_jump_to_cursor": true,
   "enable_system_commands": true,
   "shell_path": "",
-  "user_scripts_folder": "scripts",
+  "user_scripts_folder": "99-Meta/99-01-Scripts",
   "enable_folder_templates": true,
   "folder_templates": [
     {
       "folder": "01-Areas/01-01-Earth Science",
-      "template": "99-Meta/99-01-Templates/Earth Science Note.md"
+      "template": "99-Meta/99-02-Templates/Earth Science Note.md"
     },
     {
-      "folder": "01-Areas/01-02-Programming/01-02-01-Python",
-      "template": "99-Meta/99-01-Templates/Python Note.md"
-    },
-    {
-      "folder": "01-Areas/01-02-Programming/01-02-02-Machine Learning",
-      "template": "99-Meta/99-01-Templates/Machine Learning Note.md"
+      "folder": "03-Ideas",
+      "template": "99-Meta/99-02-Templates/Idea Note.md"
     }
   ],
   "enable_file_templates": false,
@@ -36,9 +32,9 @@
   ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": true,
-  "enabled_templates_hotkeys": [],
-  "startup_templates": [
-    ""
+  "enabled_templates_hotkeys": [
+    "99-Meta/99-02-Templates/Create New Note.md"
   ],
+  "startup_templates": [],
   "intellisense_render": 1
 }

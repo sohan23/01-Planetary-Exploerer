@@ -1,9 +1,26 @@
+<%*
+// Python Note Template
+const result = await tp.user.autoNumberedNoteCreation(tp);
+
+if (!result) {
+  // User cancelled
+  return;
+}
+
+// Move and rename the file
+await tp.file.move(`${result.folderPath}/${result.fullTitle}`);
+-%>
 ---
-Date: <% tp.date.now("YYYY-MM-DD") %>
-Tags: #python
+title: <% result.fullTitle %>
+aliases:
+  - <% result.cleanTitle %>
+date Created: <% tp.date.now("YYYY-MM-DD") %>
+cssclass: 
+tags: 
+ - python
 ---
 
-# <% tp.file.title %>
+# <% result.cleanTitle %>
 
 ## Module/Concept
 

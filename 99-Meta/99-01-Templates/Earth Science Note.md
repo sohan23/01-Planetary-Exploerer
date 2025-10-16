@@ -15,7 +15,7 @@ title: <% result.fullTitle %>
 aliases:
   - <% result.cleanTitle %>
 Date Created: <% tp.date.now("YYYY-MM-DD") %>
-<!-- Date Modified: <% tp.date.now("YYYY-MM-DD") %> -->
+cssclasses: 
 Tags: 
  - earth-science
 ---

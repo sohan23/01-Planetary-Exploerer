@@ -1,13 +1,6 @@
 {
   "app:new-note": [],
-  "file-explorer:new-file": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "N"
-    }
-  ],
+  "file-explorer:new-file": [],
   "workspace:next-tab": [
     {
       "modifiers": [
@@ -29,6 +22,14 @@
   "templater-obsidian:jump-to-next-cursor-location": [],
   "templater-obsidian:replace-in-file-templater": [],
   "templater-obsidian:create-99-Meta/99-02-Templates/Simple Create.md": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "N"
+    }
+  ],
+  "templater-obsidian:create-99-Meta/99-02-Templates/Create New Note.md": [
     {
       "modifiers": [
         "Mod"
