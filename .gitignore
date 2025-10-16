@@ -60,21 +60,21 @@ node_modules/
 # Untitled*.md
 
 # Large media files (uncomment specific types if needed)
-# *.mp4
-# *.mov
-# *.avi
-# *.mkv
-# *.mp3
-# *.wav
-# *.flac
-# *.zip
-# *.rar
-# *.7z
-# *.iso
-# *.pdf
-# *.epub
-# *.mobi
-# *.bib
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.mp3
+*.wav
+*.flac
+*.zip
+*.rar
+*.7z
+*.iso
+*.pdf
+*.epub
+*.mobi
+*.bib
 
 # Zotero attachments (PDFs can be large - uncomment if not tracking)
 02-Research/02-01-Scientific Research Paper/02-01-01-Zotero Imports/**/*.pdf
