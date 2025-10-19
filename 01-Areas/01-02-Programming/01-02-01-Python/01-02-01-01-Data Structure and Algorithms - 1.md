@@ -4,7 +4,8 @@ aliases:
   - Data Structure and Algorithms - 1
 date Created: 2025-10-19
 cssclasses: 
- - page-blueprint
+ - page-grid
+ - page-coding
 tags:
   - python
 ---
@@ -24,6 +25,7 @@ tags:
 ## Code Snippet
 
 ```python
+
 ```
 
 ## Explanation
