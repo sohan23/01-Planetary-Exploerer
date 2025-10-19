@@ -16,6 +16,7 @@ aliases:
   - <% result.cleanTitle %>
 date Created: <% tp.date.now("YYYY-MM-DD") %>
 cssclasses:
+ - page-grid
  - page-coding
 tags: 
  - python

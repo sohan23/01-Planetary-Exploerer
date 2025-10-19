@@ -32,7 +32,7 @@ https://angel-rs.github.io/css-color-filter-generator
   /* Page Colors */
   --page-white: #ffffff;
   --page-manila: #f3deaf;
-  --page-blue: #
+  --page-blue: #3f33e2;
   --page-black: #000000;
   --page-cream: #fef9e7;
   --page-mint: #d5f4e6;
@@ -595,8 +595,8 @@ https://angel-rs.github.io/css-color-filter-generator
 .page-dot-grid {
   background-image: radial-gradient(
     circle,
-    var(--accent-color-trans) 1.5px,
-    transparent 1.5px
+    var(--accent-color-trans) 2px,
+    transparent 2px
   );
   background-size: var(--grid-size) var(--grid-size);
 }
@@ -605,8 +605,8 @@ https://angel-rs.github.io/css-color-filter-generator
 .page-dot-grid-bold {
   background-image: radial-gradient(
     circle,
-    var(--accent-color) 1px,
-    transparent 1px
+    var(--accent-color) 2px,
+    transparent 2px
   );
   background-size: var(--grid-size) var(--grid-size);
 }
