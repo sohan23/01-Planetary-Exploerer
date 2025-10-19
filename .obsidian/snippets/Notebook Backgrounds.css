@@ -32,7 +32,7 @@ https://angel-rs.github.io/css-color-filter-generator
   /* Page Colors */
   --page-white: #ffffff;
   --page-manila: #f3deaf;
-  --page-blue: #154ec7;
+  --page-blue: #
   --page-black: #000000;
   --page-cream: #fef9e7;
   --page-mint: #d5f4e6;
@@ -728,6 +728,64 @@ div > pre {
   --hr-color: var(--accent-color);
   --image-effect: brightness(0) saturate(100%) invert(57%) sepia(44%)
     saturate(1501%) hue-rotate(169deg) brightness(97%) contrast(85%);
+}
+
+/* -------------------------- Coding Page Background ------------------------- */
+/* Optimized for coding with high contrast */
+.page-coding {
+  --page-color: #1e1e1e; /* Dark gray background */
+  --accent-color: #dcdcdc; /* Light gray text */
+  --accent-color-trans: color-mix(
+    in srgb,
+    var(--accent-color) 15%,
+    transparent
+  );
+  --image-effect: brightness(0) saturate(100%) invert(89%) sepia(1%)
+    saturate(2714%) hue-rotate(196deg) brightness(107%) contrast(98%);
+  color-scheme: dark;
+}
+.page-coding,
+.page-coding.page-grid,
+.page-coding.page-dot-grid,
+.page-coding.page-dot-grid-bold {
+  --text-normal: var(--accent-color);
+  --text-muted: var(--accent-color);
+  --text-faint: var(--accent-color-trans);
+  --h1-color: var(--accent-color);
+  --h2-color: var(--accent-color);
+  --h3-color: var(--accent-color);
+  --h4-color: var(--accent-color);
+  --h5-color: var(--accent-color);
+  --h6-color: var(--accent-color);
+  --link-color: #569cd6; /* Blue links */
+  --link-color-hover: #9cdcfe; /* Light blue hover */
+  --link-unresolved-color: #d16969; /* Red for unresolved links */
+  --hr-color: var(--accent-color);
+  --blockquote-border-color: var(--accent-color);
+  --embed-border-left: 2px solid var(--accent-color);
+  --collapse-icon-color-collapsed: var(--accent-color);
+  --checkbox-color: var(--accent-color);
+  --checkbox-marker-color: var(--page-color);
+  --checkbox-color-hover: var(--accent-color-trans);
+  --checkbox-border-color: var(--accent-color);
+  --checklist-done-color: var(--accent-color);
+  --list-marker-color: var(--accent-color);
+  --interactive-accent: var(--accent-color);
+  --metadata-label-text-color: var(--accent-color);
+  --metadata-input-text-color: var(--accent-color);
+  --tag-color: var(--accent-color);
+  --tag-background: var(--accent-color-trans);
+  --pill-cover-hover: color-mix(in srgb, var(--accent-color) 60%, transparent);
+  --background-modifier-border-focus: var(--accent-color);
+  --background-modifier-border: var(--accent-color-trans);
+  --background-modifier-hover: color-mix(
+    in srgb,
+    var(--accent-color) 60%,
+    transparent
+  );
+  color: var(--accent-color);
+  background-color: var(--page-color);
+  font-weight: bold;
 }
 
 /* New Page Backgrounds Added:

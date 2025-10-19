@@ -15,7 +15,8 @@ title: <% result.fullTitle %>
 aliases:
   - <% result.cleanTitle %>
 date Created: <% tp.date.now("YYYY-MM-DD") %>
-cssclass: 
+cssclasses:
+ - page-coding
 tags: 
  - python
 ---
