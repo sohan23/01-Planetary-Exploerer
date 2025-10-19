@@ -5,6 +5,7 @@ aliases:
 date Created: 2025-10-19
 cssclasses: 
  - page-blueprint
+ - page-dot-grid
 tags:
   - python
 ---
