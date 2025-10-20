@@ -29,6 +29,10 @@
     {
       "folder": "05-Journals/05-01-Daily Notes",
       "template": "99-Meta/99-01-Templates/Journal Note.md"
+    },
+    {
+      "folder": "01-Areas/01-04-Content Creation/01-04-03-Blog",
+      "template": "99-Meta/99-01-Templates/Blog Post Note.md"
     }
   ],
   "enable_file_templates": false,
