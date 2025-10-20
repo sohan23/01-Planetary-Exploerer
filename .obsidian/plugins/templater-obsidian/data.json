@@ -25,6 +25,10 @@
     {
       "folder": "01-Areas/01-02-Programming/01-02-02-Machine Learning",
       "template": "99-Meta/99-01-Templates/Machine Learning Note.md"
+    },
+    {
+      "folder": "05-Journals/05-01-Daily Notes",
+      "template": "99-Meta/99-01-Templates/Journal Note.md"
     }
   ],
   "enable_file_templates": false,
@@ -36,9 +40,7 @@
   ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": true,
-  "enabled_templates_hotkeys": [
-    "99-Meta/99-02-Templates/Create New Note.md"
-  ],
+  "enabled_templates_hotkeys": [],
   "startup_templates": [],
   "intellisense_render": 1
 }
