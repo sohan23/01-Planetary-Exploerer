@@ -7,7 +7,71 @@
     "iconColor": null,
     "recentlyUsedIcons": [],
     "recentlyUsedIconsSize": 5,
-    "rules": [],
+    "rules": [
+      {
+        "rule": "00",
+        "icon": "TiGlobe",
+        "for": "everything",
+        "order": 0,
+        "useFilePath": true
+      },
+      {
+        "rule": "Earth Science",
+        "icon": "FasEarthAsia",
+        "for": "folders",
+        "order": 1,
+        "useFilePath": true
+      },
+      {
+        "rule": "Python",
+        "icon": "SiPython",
+        "for": "everything",
+        "order": 2,
+        "useFilePath": true
+      },
+      {
+        "rule": "Machine Learning",
+        "icon": "OcCpu16",
+        "for": "everything",
+        "order": 3,
+        "useFilePath": true
+      },
+      {
+        "rule": "01-02-03-Project",
+        "icon": "TiFileTypeDoc",
+        "for": "everything",
+        "order": 4,
+        "useFilePath": true
+      },
+      {
+        "rule": "Instagram",
+        "icon": "FiInstagram",
+        "for": "everything",
+        "order": 5,
+        "useFilePath": true
+      },
+      {
+        "rule": "YouTube",
+        "icon": "TiBrandYoutube",
+        "for": "everything",
+        "order": 6,
+        "useFilePath": true
+      },
+      {
+        "rule": "Blog",
+        "icon": "LiSatellite",
+        "for": "everything",
+        "order": 7,
+        "useFilePath": true
+      },
+      {
+        "rule": "Research",
+        "icon": "TiPresentationAnalytics",
+        "for": "everything",
+        "order": 8,
+        "useFilePath": true
+      }
+    ],
     "extraMargin": {
       "top": 0,
       "right": 4,

@@ -4,13 +4,8 @@ aliases:
   - Data Structure and Algorithms - 1
 date Created: 2025-10-19
 cssclasses: 
-<<<<<<< HEAD
- - page-blueprint
  - page-dot-grid
-=======
- - page-grid
  - page-coding
->>>>>>> dev-css
 tags:
   - python
 ---
@@ -30,7 +25,7 @@ tags:
 ## Code Snippet
 
 ```python
-
+# Constant
 ```
 
 ## Explanation
