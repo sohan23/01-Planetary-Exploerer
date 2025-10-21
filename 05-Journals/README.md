@@ -1,3 +1,12 @@
-# 05-Journals
+# Journals
 
-This folder is for journal entries. It is organized into daily notes, weekly reviews, and long-form reflections.
+This section contains notes and resources related to Journals.
+
+## Folder Structure
+
+<details>
+<summary>05-Journals</summary>
+
+- [README.md](./README.md)
+
+</details>

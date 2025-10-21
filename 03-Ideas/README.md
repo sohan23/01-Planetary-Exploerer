@@ -1,3 +1,12 @@
 # Ideas
 
-This folder is for capturing ideas. It is divided into "Fleeting Notes" for quick thoughts and "Permanent Notes" for more developed concepts.
+This section contains notes and resources related to Ideas.
+
+## Folder Structure
+
+<details>
+<summary>03-Ideas</summary>
+
+- [README.md](./README.md)
+
+</details>
